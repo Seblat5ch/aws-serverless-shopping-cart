@@ -1,1 +1,2 @@
-aws-lambda-powertools==1.0.0
+aws-lambda-powertools==2.7.1
+future==0.18.3

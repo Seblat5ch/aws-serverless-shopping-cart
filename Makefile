@@ -2,7 +2,7 @@ all: backend frontend-build
 
 TEMPLATES = auth product-mock shoppingcart-service
 
-REGION := $(shell python3 -c 'import boto3; print(boto3.Session().region_name)')
+REGION := $(shell python -c 'import boto3; print(boto3.Session().region_name)')
 ifndef S3_BUCKET
 ACCOUNT_ID := $(shell aws sts get-caller-identity --query Account --output text)
 S3_BUCKET = aws-serverless-shopping-cart-src-$(ACCOUNT_ID)-$(REGION)
